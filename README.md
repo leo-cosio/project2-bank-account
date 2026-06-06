@@ -1,16 +1,45 @@
-# React + Vite
+# Bank App 💳
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación frontend simulada de banca personal desarrollada con React. El proyecto utiliza MSW (Mock Service Worker) para simular un backend y practicar consumo de APIs reales sin necesidad de servidor.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Características
 
-## React Compiler
+- Login simulado de usuario
+- Dashboard con saldo y resumen de cuenta
+- Historial de transacciones
+- Transferencias entre cuentas simuladas
+- Filtrado básico de movimientos
+- Gestión de estado en frontend
+- API mockeada con MSW
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologías utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- React Router
+- Context API
+- MSW (Mock Service Worker)
+- Fetch / Axios
+- CSS / Bootstrap (según implementación)
+
+---
+
+## 💡 Objetivo del proyecto
+
+Este proyecto tiene como objetivo practicar:
+
+- Manejo de estado en React
+- Consumo de APIs
+- Formularios controlados
+- Enrutado con React Router
+- Arquitectura de componentes
+- Simulación de backend con MSW
+
+---
+
+## 📌 Notas
+
+Este proyecto no está conectado a un backend real. Todos los datos son simulados para fines educativos.
