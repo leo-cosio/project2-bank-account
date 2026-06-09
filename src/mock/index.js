@@ -79,5 +79,8 @@ const handleLogin = http.post(`${API}/login`, async ({ request }) => {
 
   return HttpResponse.json(user);
 });
+
+// TODO HandleTransaction (POST)
+
 const worker = setupWorker(handleLogin);
 export default worker;
