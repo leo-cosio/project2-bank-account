@@ -8,7 +8,7 @@ const users = [
     uid: self.crypto.randomUUID(),
     credentials: {
       email: "jane.doe@user.com",
-      password: "12345678",
+      password: "123123",
     },
     name: "Jane",
     surname: "Doe",
@@ -41,7 +41,7 @@ const users = [
     uid: self.crypto.randomUUID(),
     credentials: {
       email: "jon.doe@user.com",
-      password: "12345678",
+      password: "123123",
     },
     name: "Jon",
     surname: "Doe",
@@ -75,7 +75,18 @@ const users = [
 const handleLogin = http.post(`${API}/login`, async ({ request }) => {
   const login = await request.json();
 
-  const user = users.find((user) => user.credentials === login);
+  const user = users.find(
+    (user) =>
+      user.credentials.email === login.email &&
+      user.credentials.password === login.password,
+  );
+
+  if (!user) {
+    return HttpResponse.json(
+      { message: "Invalid username or password" },
+      { status: 401 },
+    );
+  }
 
   return HttpResponse.json(user);
 });
