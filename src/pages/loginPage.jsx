@@ -1,15 +1,17 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
 import * as AuthService from "../services/auth-service";
+import { useAuth } from "../contexts/auth-context";
 
 function LoginPage() {
-  const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
+  const { login } = useAuth();
+  const { register, handleSubmit } = useForm();
 
   const handleLogin = async (user) => {
     try {
-      console.log(user);
       user = await AuthService.loginUser(user);
+      login(user);
       console.log(user);
       navigate("/home");
     } catch (error) {

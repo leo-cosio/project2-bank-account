@@ -11,7 +11,9 @@ export function AuthContextProvider({ children }) {
   );
 
   const login = (user) => {
+    delete user.credentials;
     self.localStorage.setItem(LS_CURRENT_USER_KEY, JSON.stringify(user));
+    setUser(user);
   };
 
   const logout = () => {
@@ -26,6 +28,7 @@ export function AuthContextProvider({ children }) {
   );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useAuth() {
   return useContext(AuthContext);
 }
