@@ -30,6 +30,14 @@ function LoginPage() {
     } catch (error) {
       console.error(error);
 
+      if (error.response?.status === 401) {
+        const message = error.response.data?.message;
+
+        setError("password", { message });
+
+        return;
+      }
+
       if (error.response?.status === 400) {
         Object.keys(error.response.data.errors).forEach((field) => {
           setError(field, { message: error.response.data.errors[field] });

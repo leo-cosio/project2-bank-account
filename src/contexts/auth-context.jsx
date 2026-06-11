@@ -14,7 +14,7 @@ export function AuthContextProvider({ children }) {
     // eslint-disable-next-line no-unused-vars
     const { credentials, ...safeUser } = user;
     self.localStorage.setItem(LS_CURRENT_USER_KEY, JSON.stringify(safeUser));
-    setUser(user);
+    setUser(safeUser);
   };
 
   const logout = () => {

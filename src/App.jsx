@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from "react-router";
 import { HomePage, LoginPage, TransactionsPage } from "./pages";
+import PrivateRoute from "./guards/privateRoute";
 
 function App() {
   return (
@@ -7,8 +8,23 @@ function App() {
       <Routes>
         <Route index element={<Navigate to="/login" replace />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/home" element={<HomePage />} />
-        <Route path="/transactions" element={<TransactionsPage />} />
+        <Route
+          path="/home"
+          element={
+            <PrivateRoute>
+              <HomePage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/transactions"
+          element={
+            <PrivateRoute>
+              <TransactionsPage />
+            </PrivateRoute>
+          }
+        />
+        <Route path="*" element={<Navigate to="/login" replace />} />
       </Routes>
     </>
   );

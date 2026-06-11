@@ -1,4 +1,4 @@
-import { Balance } from "../contexts/ui";
+import { Balance } from "../components/ui";
 import { useAuth } from "../contexts/auth-context";
 import { LogoutButton } from "../components";
 import { useNavigate } from "react-router";
