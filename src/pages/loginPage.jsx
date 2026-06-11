@@ -2,20 +2,39 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
 import * as AuthService from "../services/auth-service";
 import { useAuth } from "../contexts/auth-context";
+import { useEffect } from "react";
 
 function LoginPage() {
   const navigate = useNavigate();
-  const { login } = useAuth();
-  const { register, handleSubmit } = useForm();
+  const { user, login } = useAuth();
+  const {
+    register,
+    handleSubmit,
+    setError,
+    formState: { errors, isValid },
+  } = useForm();
+
+  useEffect(() => {
+    if (user) {
+      navigate("/home");
+    }
+  }, [user, navigate]);
 
   const handleLogin = async (user) => {
     try {
       user = await AuthService.loginUser(user);
       login(user);
-      console.log(user);
       navigate("/home");
+
+      console.log(user);
     } catch (error) {
       console.error(error);
+
+      if (error.response?.status === 400) {
+        Object.keys(error.response.data.errors).forEach((field) => {
+          setError(field, { message: error.response.data.errors[field] });
+        });
+      }
     }
   };
 
@@ -27,28 +46,34 @@ function LoginPage() {
         {/* Email */}
         <div className="mb-3">
           <input
-            {...register("email")}
+            {...register("email", { required: "Email is required" })}
             type="email"
             className="form-control"
             id="email"
             placeholder="Email"
           />
+          {errors.email && (
+            <small className="text-danger">{errors.email.message}</small>
+          )}
         </div>
 
         {/* Password */}
         <div className="mb-3">
           <input
-            {...register("password")}
+            {...register("password", { required: "Password is required" })}
             type="password"
             className="form-control"
             id="password"
             placeholder="Password"
             autoComplete="on"
           />
+          {errors.password && (
+            <small className="text-danger">{errors.password.message}</small>
+          )}
         </div>
 
         {/* Submit */}
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary" disabled={!isValid}>
           Login
         </button>
       </form>
