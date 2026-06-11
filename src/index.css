@@ -21,10 +21,26 @@ body {
   background-color: var(--bg);
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6, p {
   color: var(--text);
 }
 
 button {
   background-color: var(--primary);
+}
+
+#sidebar {
+  background-color: var(--primary);
+  color: var(--surface);
+  font-weight: bold;
+  text-align: center;
+}
+
+#sidebar h3 {
+  color: var(--surface);
+}
+
+#sidebar-buttons {
+  list-style-type: none;
+  padding: 0;
 }

@@ -12,7 +12,12 @@ function LogoutButton() {
 
   return (
     <div>
-      <button type="button" className="btn bg-danger" onClick={handleLogout}>
+      <button
+        type="button"
+        className="btn bg-danger"
+        onClick={handleLogout}
+        style={{ color: "#f9fafc", fontWeight: "bold" }}
+      >
         Logout
       </button>
     </div>
