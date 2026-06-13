@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6, p {
 button {
   background-color: var(--primary);
 }
-
+/* 
 #sidebar {
   background-color: var(--primary);
   color: var(--surface);
@@ -44,3 +44,4 @@ button {
   list-style-type: none;
   padding: 0;
 }
+ */

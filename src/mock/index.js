@@ -45,7 +45,7 @@ const users = [
     },
     name: "Jon",
     surname: "Doe",
-    balance: 8000,
+    balance: 999,
     transactions: [
       {
         id: 1,
