@@ -19,7 +19,7 @@ const users = [
         type: "transfer", // transfer, deposit, withdrawal
         amount: -50,
         description: "Cena con amigos",
-        date: "2026-06-09T18:30",
+        date: "2026-06-08T18:30",
       },
       {
         id: 2,
@@ -33,7 +33,7 @@ const users = [
         type: "withdrawal",
         amount: -500,
         description: "Efectivo",
-        date: "2026-06-09T18:30",
+        date: "2026-06-10T18:30",
       },
     ],
   },

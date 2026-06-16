@@ -64,11 +64,6 @@ function Sidebar() {
           >
             <li>
               <a className="dropdown-item" href="#">
-                New project...
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">
                 Settings
               </a>
             </li>

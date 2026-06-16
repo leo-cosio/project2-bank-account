@@ -1,12 +1,31 @@
 import { Sidebar } from "../components";
+import { useAuth } from "../contexts/auth-context";
 
 function TransactionsPage() {
+  const { user } = useAuth();
+  const { transactions } = user;
+
   return (
-    <div className="d-flex">
+    <div className="d-flex vh-100">
       <Sidebar />
-      <h1 className="d-flex justify-content-center align-items-center vh-100 w-100 flex-column">
-        Transactions Page
-      </h1>
+
+      <div className="w-100">
+        <div>
+          <ol>
+            {transactions
+              .map((transaction) => (
+                <li key={transaction.id}>
+                  {transaction.amount > 0
+                    ? `+${transaction.amount}`
+                    : `${transaction.amount}`}{" "}
+                  - {transaction.type} - {transaction.description} -{" "}
+                  {transaction.date}
+                </li>
+              ))
+              .reverse()}
+          </ol>
+        </div>
+      </div>
     </div>
   );
 }
