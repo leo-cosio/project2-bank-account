@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from "react-router";
 import { HomePage, LoginPage, TransactionsPage } from "./pages";
 import PrivateRoute from "./guards/privateRoute";
+import NewTransactionPage from "./pages/newTransactionPage";
 
 function App() {
   return (
@@ -21,6 +22,14 @@ function App() {
           element={
             <PrivateRoute>
               <TransactionsPage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/new-transaction"
+          element={
+            <PrivateRoute>
+              <NewTransactionPage />
             </PrivateRoute>
           }
         />
