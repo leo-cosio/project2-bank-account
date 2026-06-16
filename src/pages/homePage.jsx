@@ -8,11 +8,25 @@ function HomePage() {
   return (
     <div className="d-flex">
       <Sidebar />
-      <div className="d-flex justify-content-center align-items-center vh-100 w-100 flex-column">
-        <h1>Home Page</h1>
 
-        <div>
-          <Balance balance={user.balance} />
+      <div className="vh-100 w-100">
+        <div className="d-flex">
+          <div className="border border-black vh-100 w-75">
+            <div className="border border-primary h-25 d-flex">
+              <Balance balance={user.balance} />
+              <div>Total Savings</div>
+            </div>
+            <div className="border border-success h-50">Stats</div>
+            <div className="h-25">
+              <div>Goals</div>
+              <div>Spending Overview</div>
+            </div>
+          </div>
+
+          <div className="vh-100">
+            <div className="h-75">Transactions</div>
+            <div className="h-25">Quick Transfer</div>
+          </div>
         </div>
       </div>
     </div>
