@@ -14,14 +14,17 @@ function LoginPage() {
     formState: { errors, isValid },
   } = useForm();
 
+  // If an user already exists then go to home
   useEffect(() => {
     if (user) {
       navigate("/home");
     }
   }, [user, navigate]);
 
+  // On submit do:
   const handleLogin = async (user) => {
     try {
+      //Send user data to API
       user = await AuthService.loginUser(user);
       login(user);
       navigate("/home");
@@ -30,6 +33,7 @@ function LoginPage() {
     } catch (error) {
       console.error(error);
 
+      // If something went wrong
       if (error.response?.status === 401) {
         const message = error.response.data?.message;
 

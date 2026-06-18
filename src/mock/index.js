@@ -763,7 +763,17 @@ const handleLogin = http.post(`${API}/login`, async ({ request }) => {
   return HttpResponse.json(user);
 });
 
-// TODO HandleTransaction (POST)
+const handleTransaction = http.post(
+  `${API}/new-transaction`,
+  async ({ request }) => {
+    const transaction = await request.json();
 
-const worker = setupWorker(handleLogin);
+    return HttpResponse.json({
+      message: "New transaction created!",
+      status: 201,
+    });
+  },
+);
+
+const worker = setupWorker(handleLogin, handleTransaction);
 export default worker;

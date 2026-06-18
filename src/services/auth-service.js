@@ -8,3 +8,9 @@ export async function loginUser(user) {
   const { data } = await http.post("/login", user);
   return data;
 }
+
+export async function newTransaction(transaction) {
+  const { data } = await http.post("/new-transaction", transaction);
+
+  return data;
+}

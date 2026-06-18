@@ -1,3 +1,4 @@
+import { NavLink } from "react-router";
 import { Sidebar } from "../components";
 import { useAuth } from "../contexts/auth-context";
 
@@ -25,6 +26,8 @@ function TransactionsPage() {
               .reverse()}
           </ol>
         </div>
+
+        <NavLink to="/new-transaction" />
       </div>
     </div>
   );
