@@ -5,7 +5,7 @@ const API = "https://api.bank.com";
 
 const users = [
   {
-    uid: self.crypto.randomUUID(),
+    uid: "user-1",
     credentials: {
       email: "jane.doe@user.com",
       password: "123123",
@@ -87,7 +87,7 @@ const users = [
     ],
   },
   {
-    uid: self.crypto.randomUUID(),
+    uid: "user-2",
     credentials: {
       email: "jon.doe@user.com",
       password: "123123",
@@ -169,7 +169,7 @@ const users = [
     ],
   },
   {
-    uid: self.crypto.randomUUID(),
+    uid: "user-3",
     credentials: {
       email: "maria.garcia@user.com",
       password: "123123",
@@ -251,7 +251,7 @@ const users = [
     ],
   },
   {
-    uid: self.crypto.randomUUID(),
+    uid: "user-4",
     credentials: {
       email: "carlos.ruiz@user.com",
       password: "123123",
@@ -333,7 +333,7 @@ const users = [
     ],
   },
   {
-    uid: self.crypto.randomUUID(),
+    uid: "user-5",
     credentials: {
       email: "laura.martin@user.com",
       password: "123123",
@@ -414,334 +414,6 @@ const users = [
       },
     ],
   },
-  {
-    uid: self.crypto.randomUUID(),
-    credentials: {
-      email: "pedro.lopez@user.com",
-      password: "123123",
-    },
-    name: "Pedro",
-    surname: "López",
-    balance: 6400,
-    transactions: [
-      {
-        id: 1,
-        type: "deposit",
-        amount: +1600,
-        description: "Salario",
-        date: "2026-06-01T08:10",
-      },
-      {
-        id: 2,
-        type: "transfer",
-        amount: -300,
-        description: "Alquiler",
-        date: "2026-06-01T10:15",
-      },
-      {
-        id: 3,
-        type: "transfer",
-        amount: -45,
-        description: "Uber",
-        date: "2026-06-02T22:00",
-      },
-      {
-        id: 4,
-        type: "withdrawal",
-        amount: -70,
-        description: "Cajero",
-        date: "2026-06-03T12:00",
-      },
-      {
-        id: 5,
-        type: "deposit",
-        amount: +200,
-        description: "Préstamo devuelto",
-        date: "2026-06-04T18:30",
-      },
-      {
-        id: 6,
-        type: "transfer",
-        amount: -55,
-        description: "Comida rápida",
-        date: "2026-06-05T21:10",
-      },
-      {
-        id: 7,
-        type: "transfer",
-        amount: -30,
-        description: "Parking",
-        date: "2026-06-06T09:45",
-      },
-      {
-        id: 8,
-        type: "deposit",
-        amount: +300,
-        description: "Venta de muebles",
-        date: "2026-06-07T16:20",
-      },
-      {
-        id: 9,
-        type: "withdrawal",
-        amount: -60,
-        description: "Efectivo",
-        date: "2026-06-08T13:05",
-      },
-      {
-        id: 10,
-        type: "transfer",
-        amount: -80,
-        description: "Regalo sobrino",
-        date: "2026-06-09T19:55",
-      },
-    ],
-  },
-  {
-    uid: self.crypto.randomUUID(),
-    credentials: {
-      email: "ana.santos@user.com",
-      password: "123123",
-    },
-    name: "Ana",
-    surname: "Santos",
-    balance: 9200,
-    transactions: [
-      {
-        id: 1,
-        type: "deposit",
-        amount: +2200,
-        description: "Nómina",
-        date: "2026-06-01T09:05",
-      },
-      {
-        id: 2,
-        type: "transfer",
-        amount: -400,
-        description: "Alquiler piso",
-        date: "2026-06-01T09:30",
-      },
-      {
-        id: 3,
-        type: "withdrawal",
-        amount: -90,
-        description: "Cajero",
-        date: "2026-06-02T18:00",
-      },
-      {
-        id: 4,
-        type: "transfer",
-        amount: -60,
-        description: "Comida con amigos",
-        date: "2026-06-03T21:00",
-      },
-      {
-        id: 5,
-        type: "deposit",
-        amount: +300,
-        description: "Clases particulares",
-        date: "2026-06-04T17:00",
-      },
-      {
-        id: 6,
-        type: "transfer",
-        amount: -50,
-        description: "Taxi aeropuerto",
-        date: "2026-06-05T06:30",
-      },
-      {
-        id: 7,
-        type: "transfer",
-        amount: -120,
-        description: "Compras ropa",
-        date: "2026-06-06T15:40",
-      },
-      {
-        id: 8,
-        type: "deposit",
-        amount: +400,
-        description: "Devolución billetes",
-        date: "2026-06-07T13:20",
-      },
-      {
-        id: 9,
-        type: "transfer",
-        amount: -70,
-        description: "Cine y palomitas",
-        date: "2026-06-08T20:10",
-      },
-      {
-        id: 10,
-        type: "withdrawal",
-        amount: -100,
-        description: "Efectivo",
-        date: "2026-06-09T10:50",
-      },
-    ],
-  },
-  {
-    uid: self.crypto.randomUUID(),
-    credentials: {
-      email: "lucas.fernandez@user.com",
-      password: "123123",
-    },
-    name: "Lucas",
-    surname: "Fernández",
-    balance: 7100,
-    transactions: [
-      {
-        id: 1,
-        type: "deposit",
-        amount: +1900,
-        description: "Salario",
-        date: "2026-06-01T08:05",
-      },
-      {
-        id: 2,
-        type: "transfer",
-        amount: -250,
-        description: "Alquiler",
-        date: "2026-06-01T09:00",
-      },
-      {
-        id: 3,
-        type: "transfer",
-        amount: -40,
-        description: "Café semana",
-        date: "2026-06-02T10:30",
-      },
-      {
-        id: 4,
-        type: "withdrawal",
-        amount: -50,
-        description: "Efectivo",
-        date: "2026-06-03T12:40",
-      },
-      {
-        id: 5,
-        type: "deposit",
-        amount: +300,
-        description: "Trabajo extra",
-        date: "2026-06-04T18:15",
-      },
-      {
-        id: 6,
-        type: "transfer",
-        amount: -70,
-        description: "Restaurante",
-        date: "2026-06-05T21:30",
-      },
-      {
-        id: 7,
-        type: "transfer",
-        amount: -60,
-        description: "Gasolina",
-        date: "2026-06-06T11:10",
-      },
-      {
-        id: 8,
-        type: "deposit",
-        amount: +250,
-        description: "Venta guitarra",
-        date: "2026-06-07T19:00",
-      },
-      {
-        id: 9,
-        type: "withdrawal",
-        amount: -80,
-        description: "Cajero",
-        date: "2026-06-08T14:05",
-      },
-      {
-        id: 10,
-        type: "transfer",
-        amount: -60,
-        description: "Regalo amigo",
-        date: "2026-06-09T18:45",
-      },
-    ],
-  },
-  {
-    uid: self.crypto.randomUUID(),
-    credentials: {
-      email: "sofia.navarro@user.com",
-      password: "123123",
-    },
-    name: "Sofía",
-    surname: "Navarro",
-    balance: 8300,
-    transactions: [
-      {
-        id: 1,
-        type: "deposit",
-        amount: +2100,
-        description: "Nómina",
-        date: "2026-06-01T08:20",
-      },
-      {
-        id: 2,
-        type: "transfer",
-        amount: -350,
-        description: "Alquiler",
-        date: "2026-06-01T09:25",
-      },
-      {
-        id: 3,
-        type: "withdrawal",
-        amount: -70,
-        description: "Efectivo",
-        date: "2026-06-02T17:50",
-      },
-      {
-        id: 4,
-        type: "transfer",
-        amount: -55,
-        description: "Cafetería",
-        date: "2026-06-03T10:00",
-      },
-      {
-        id: 5,
-        type: "deposit",
-        amount: +250,
-        description: "Trabajo extra",
-        date: "2026-06-04T20:00",
-      },
-      {
-        id: 6,
-        type: "transfer",
-        amount: -90,
-        description: "Salir a cenar",
-        date: "2026-06-05T22:10",
-      },
-      {
-        id: 7,
-        type: "transfer",
-        amount: -40,
-        description: "Taxis",
-        date: "2026-06-06T23:30",
-      },
-      {
-        id: 8,
-        type: "deposit",
-        amount: +300,
-        description: "Venta libros",
-        date: "2026-06-07T18:40",
-      },
-      {
-        id: 9,
-        type: "transfer",
-        amount: -60,
-        description: "Suscripciones",
-        date: "2026-06-08T07:30",
-      },
-      {
-        id: 10,
-        type: "withdrawal",
-        amount: -80,
-        description: "Cajero",
-        date: "2026-06-09T13:25",
-      },
-    ],
-  },
 ];
 
 const handleLogin = http.post(`${API}/login`, async ({ request }) => {
@@ -767,11 +439,21 @@ const handleTransaction = http.post(
   `${API}/new-transaction`,
   async ({ request }) => {
     const transaction = await request.json();
+    const { uid, ...newTransaction } = transaction;
+    const user = users.find((user) => user.uid === uid);
 
-    return HttpResponse.json({
-      message: "New transaction created!",
-      status: 201,
-    });
+    if (!user)
+      return HttpResponse.json({ message: "User not found!" }, { status: 401 });
+
+    newTransaction.id = user.transactions.length + 1;
+    user.balance += newTransaction.amount;
+
+    user.transactions.push(newTransaction);
+
+    return HttpResponse.json(
+      { message: "New transaction created!" },
+      { status: 201 },
+    );
   },
 );
 

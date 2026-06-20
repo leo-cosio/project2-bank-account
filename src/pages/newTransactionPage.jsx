@@ -31,13 +31,14 @@ function NewTransactionPage() {
             : +Number(data.amount),
         description: data.description,
         date: data.date,
-        uuid: user.uid,
+        uid: user.uid,
       };
-      addTransaction(transaction);
-      AuthService.newTransaction(transaction);
-      navigate("/home");
 
-      console.log(transaction);
+      const response = await AuthService.newTransaction(transaction);
+      console.log(response);
+
+      addTransaction(transaction);
+      navigate("/home");
     } catch (error) {
       console.error(error);
     }
