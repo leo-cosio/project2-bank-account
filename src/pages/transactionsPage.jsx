@@ -6,16 +6,19 @@ function TransactionsPage() {
   const { user } = useAuth();
   const { transactions } = user;
 
-  return (
+  /* return (
     <div className="d-flex vh-100">
       <Sidebar />
 
       <div className="w-100">
         <div>
-          <ol>
+          <ol className="list-group">
             {transactions
               .map((transaction) => (
-                <li key={transaction.id}>
+                <li
+                  key={transaction.id}
+                  className="list-group-item bg-transparent"
+                >
                   {transaction.amount > 0
                     ? `+${transaction.amount}`
                     : `${transaction.amount}`}{" "}
@@ -28,6 +31,60 @@ function TransactionsPage() {
         </div>
 
         <NavLink to="/new-transaction" />
+      </div>
+    </div>
+  ) */ const sortedTransactions = [...transactions].reverse();
+
+  return (
+    <div className="d-flex vh-100">
+      <Sidebar />
+
+      <div className="w-100 p-4">
+        <div className="d-flex justify-content-between align-items-center mb-4">
+          <h1 className="h3 mb-0">Transactions</h1>
+
+          <NavLink to="/new-transaction" className="btn btn-primary">
+            New transaction
+          </NavLink>
+        </div>
+
+        <div className="card shadow-sm">
+          <div className="card-body p-0">
+            <ol className="list-group list-group-flush">
+              {sortedTransactions.map((transaction) => {
+                const isIncome = transaction.amount > 0;
+                const amountLabel = isIncome
+                  ? `+${transaction.amount}€`
+                  : `${transaction.amount}€`;
+
+                return (
+                  <li
+                    key={transaction.id}
+                    className="list-group-item d-flex justify-content-between align-items-center"
+                  >
+                    <div>
+                      <div className="fw-semibold text-capitalize">
+                        {transaction.description || transaction.type}
+                      </div>
+                      <small className="text-muted">
+                        {transaction.type} · {transaction.date}
+                      </small>
+                    </div>
+
+                    <span
+                      className={
+                        "fw-semibold " +
+                        (isIncome ? "text-success" : "text-danger")
+                      }
+                    >
+                      {amountLabel}
+                    </span>
+                  </li>
+                );
+              })}
+            </ol>
+          </div>
+        </div>
       </div>
     </div>
   );

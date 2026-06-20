@@ -28,8 +28,6 @@ function LoginPage() {
       user = await AuthService.loginUser(user);
       login(user);
       navigate("/home");
-
-      console.log(user);
     } catch (error) {
       console.error(error);
 
