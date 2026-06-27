@@ -5,35 +5,7 @@ import { useAuth } from "../contexts/auth-context";
 function TransactionsPage() {
   const { user } = useAuth();
   const { transactions } = user;
-
-  /* return (
-    <div className="d-flex vh-100">
-      <Sidebar />
-
-      <div className="w-100">
-        <div>
-          <ol className="list-group">
-            {transactions
-              .map((transaction) => (
-                <li
-                  key={transaction.id}
-                  className="list-group-item bg-transparent"
-                >
-                  {transaction.amount > 0
-                    ? `+${transaction.amount}`
-                    : `${transaction.amount}`}{" "}
-                  - {transaction.type} - {transaction.description} -{" "}
-                  {transaction.date}
-                </li>
-              ))
-              .reverse()}
-          </ol>
-        </div>
-
-        <NavLink to="/new-transaction" />
-      </div>
-    </div>
-  ) */ const sortedTransactions = [...transactions].reverse();
+  const sortedTransactions = [...transactions].reverse();
 
   return (
     <div className="d-flex vh-100">
