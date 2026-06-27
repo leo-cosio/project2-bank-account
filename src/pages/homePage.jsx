@@ -22,8 +22,8 @@ function HomePage() {
           </div>
 
           <div className="vh-100 w-25">
-            <div className="h-75 border border-warning border-3 w-100 h-75">
-              <h1>Last Transactions</h1>
+            <div className="h-75 w-100 h-75 mt-3 p-3">
+              <h1 className="mb-3">Last Transactions</h1>
 
               <div className="d-flex flex-column justify-content-around">
                 <HomeTransactions />
