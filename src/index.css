@@ -1,5 +1,5 @@
 :root {
-  --bg: #e6eaf1;
+  --bg: #ffffff;
   --surface: #f9fafc;
   --surface-alt: #eef2f6;
 
@@ -19,6 +19,9 @@
 
 body {
   background-color: var(--bg);
+  margin-left: 250px;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -28,20 +31,18 @@ h1, h2, h3, h4, h5, h6, p {
 button {
   background-color: var(--primary);
 }
-/* 
+
+#balanceCard {
+  background-color: #EBF3F9;
+  padding: 1rem;
+}
+
 #sidebar {
-  background-color: var(--primary);
-  color: var(--surface);
-  font-weight: bold;
-  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 1000;
 }
-
-#sidebar h3 {
-  color: var(--surface);
-}
-
-#sidebar-buttons {
-  list-style-type: none;
-  padding: 0;
-}
- */

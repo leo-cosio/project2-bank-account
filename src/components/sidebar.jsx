@@ -9,15 +9,11 @@ function Sidebar() {
     <>
       <div
         className="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark"
-        style={{ width: "250px" }}
+        id="sidebar"
       >
-        <a
-          href="/"
-          className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
-        >
-          <svg className="bi me-2" width="40" height="32"></svg>
-          <span className="fs-4">EasyBank</span>
-        </a>
+        <div className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+          <span className="fs-4 ms-3">EasyBank</span>
+        </div>
         <hr />
         <ul className="nav nav-pills flex-column mb-auto">
           <li className="nav-item">
@@ -45,7 +41,6 @@ function Sidebar() {
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            <img width="32" height="32" className="rounded-circle me-2" />
             <strong>{user.name}</strong>
           </a>
           <ul

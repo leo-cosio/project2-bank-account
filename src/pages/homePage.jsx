@@ -1,6 +1,6 @@
 import { Balance } from "../components/ui";
 import { useAuth } from "../contexts/auth-context";
-import { HomeTransactions, Sidebar } from "../components";
+import { HomeTransactions, Sidebar, Stats } from "../components";
 
 function HomePage() {
   const { user } = useAuth();
@@ -12,21 +12,13 @@ function HomePage() {
       <div className="vh-100 w-100">
         <div className="d-flex">
           <div className="border border-black vh-100 w-75 border-3">
-            <div className="border border-primary h-25 d-flex border-3">
-              <div className="w-50 border border-dark border-3">
-                <Balance balance={user.balance} />
-              </div>
+            <div className="h-25 d-flex">
+              <Balance balance={user.balance} />
               <div className="w-50 border border-warning border-3">
                 Total Savings
               </div>
             </div>
-            <div className="border border-success h-50 border-3">Stats</div>
-            <div className="h-25 d-flex justify-content-around">
-              <div className="border border-danger border-3">Goals</div>
-              <div className="border border-dark border-3">
-                Spending Overview
-              </div>
-            </div>
+            <Stats />
           </div>
 
           <div className="vh-100 w-25">
@@ -36,9 +28,6 @@ function HomePage() {
               <div className="d-flex flex-column justify-content-around">
                 <HomeTransactions />
               </div>
-            </div>
-            <div className="h-25 border border-success border-3">
-              Quick Transfer
             </div>
           </div>
         </div>
