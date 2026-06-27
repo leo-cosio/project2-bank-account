@@ -11,8 +11,8 @@ function HomePage() {
 
       <div className="vh-100 w-100">
         <div className="d-flex">
-          <div className="border border-black vh-100 w-75 border-3">
-            <div className="h-25 d-flex">
+          <div className="vh-100 w-75 p-3">
+            <div className="h-25 d-flex pb-3">
               <Balance balance={user.balance} />
               <div className="w-50 border border-warning border-3">
                 Total Savings
