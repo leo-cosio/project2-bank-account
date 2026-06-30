@@ -8,7 +8,7 @@ function TransactionsPage() {
   const sortedTransactions = [...transactions].reverse();
 
   return (
-    <div className="d-flex vh-100">
+    <div className="d-flex vh-100" style={{ marginLeft: "250px" }}>
       <Sidebar />
 
       <div className="w-100 p-4">

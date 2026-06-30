@@ -62,7 +62,7 @@ function Chart() {
         <Tooltip />
         <Legend />
         <Bar dataKey="income" name="Ingresos" fill="#C89A76" />
-        <Bar dataKey="expense" name="Gastos" fill="#ffffff" />
+        <Bar dataKey="expense" name="Gastos" fill="#444444" />
       </BarChart>
     </ResponsiveContainer>
   );

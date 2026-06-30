@@ -19,7 +19,6 @@
 
 body {
   background-color: var(--bg);
-  margin-left: 250px;
   height: 100vh;
   overflow-y: auto;
 }

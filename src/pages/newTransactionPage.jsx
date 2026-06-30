@@ -45,7 +45,7 @@ function NewTransactionPage() {
   };
 
   return (
-    <div className="d-flex vh-100">
+    <div className="d-flex vh-100" style={{ marginLeft: "250px" }}>
       <Sidebar />
       <div className="container d-flex justify-content-center align-items-center vh-100 flex-column">
         <h1>New Transaction</h1>

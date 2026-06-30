@@ -20,16 +20,21 @@ function Balance({ balance }) {
   }, 0);
 
   return (
-    <div id="balanceCard" className="card w-50 me-3 border border-0 rounded-0">
-      <h2>Total Balance</h2>
-      <h1>{balance}€</h1>
+    <div
+      id="balanceCard"
+      className="card w-50 me-3 border border-0 rounded-0 justify-content-between p-4"
+    >
+      <div>
+        <h3 className="mb-3">Total Balance</h3>
+        <h1>{balance}€</h1>
+      </div>
       <div className="d-flex">
-        <div className="w-50">
-          <p>Income</p>
+        <div className="w-50 border-end me-5 border-secondary-subtle">
+          <h5>Income</h5>
           <h4 className="text-success">+{income}</h4>
         </div>
         <div className="w-50">
-          <p>Expenses</p>
+          <h5>Expenses</h5>
           <h4 className="text-danger">{expenses}</h4>
         </div>
       </div>
